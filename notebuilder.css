@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 40rem;
+  padding: 0 2rem;
+  margin: 2rem auto;
+}
+
+.form {
+  font-size: 100%
+}
+
+/*Check HTML Color Codes here: "https://htmlcolorcodes.com/"*/
+header{
+  background-color: #09A4EE;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+/* grey line beneath blue header box */
+.navLine{
+  margin-top: 0;
+  height: 3px;
+  background-color: #D3D8DC;
+  margin-bottom: 1rem;
+}
+
+/* hyperlinks beneath h1 */
+.nav-menu li {
+  display: inline;
+  padding: 0px 5px;
+  font-size:100%;
+  margin: 2rem auto;
+}
+
+.form label, .form input {
+display: block;
+width: 100%;
+font-size: 100%;
+}
+
+textarea{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+textarea, .body-text{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 10;
+  width: 100%;
+  font-family: inherit;
+}
+
+.form button{
+  font-size: 100%;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+}
+
+.schema {
+  max-width:100%;
+  height:auto;
+}
