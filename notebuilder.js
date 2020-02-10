@@ -73,9 +73,9 @@ function noteActionHTML (note) {
     event.preventDefault()
     const subjectField = q('#subject')
     const bodyField = q('#body')
-    const bodyText = subjectField.value + '<br>' + bodyField.value
+    const noteText = subjectField.value + '<br>' + bodyField.value
     bodyField.value = ''
-    postNewNote(bodyText).then(renderNewNote)
+    postNewNote(noteText).then(renderNewNote)
   })
   
   q('#notes').addEventListener('click', event => {
