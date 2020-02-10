@@ -23,7 +23,7 @@ function print (value) {
     for (const note of notes) {
       notesStr += noteActionHTML(note)
     }
-    notesStr += "</div>"
+    notesStr += "</ul>"
     return notesStr
   }
   
@@ -36,7 +36,7 @@ function noteActionHTML (note) {
     return fetch('http://localhost:3000/notes/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ note: subjectText, body, done: false, created: moment().format() })
+      body: JSON.stringify({ note: subjectText, done: false, created: moment().format() })
     })
       .then(response => response.json())
   }
@@ -54,7 +54,7 @@ function noteActionHTML (note) {
     notesList.insertAdjacentHTML('beforeend', noteHTML)
   }
   
-  //this will fall under Edit Note
+  //this should sort View/Edit Note
   // $('#firstCollapseMenu').collapsible({
   //   accordion: false,
   //   accordionUpSpeed: 400,
@@ -74,13 +74,14 @@ function noteActionHTML (note) {
     const subjectField = q('#subject')
     const bodyField = q('#body')
     const noteText = subjectField.value + '<br>' + bodyField.value
+    subjectField.value = ''
     bodyField.value = ''
     postNewNote(noteText).then(renderNewNote)
   })
   
   q('#notes').addEventListener('click', event => {
     if (event.target.matches('.delete')) {
-    print('delete ' + event.target.parentElement.dataset.todoId)
+    print('delete ' + event.target.parentElement.dataset.noteId)
       // NOTE send AJAX request to delete note
     }
   })
