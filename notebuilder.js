@@ -86,4 +86,3 @@ function noteActionHTML (note) {
       // NOTE send AJAX request to delete note
     }
   })
-  
