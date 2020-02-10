@@ -53,18 +53,7 @@ function noteActionHTML (note) {
     const notesList = document.querySelector('#notes-list')
     notesList.insertAdjacentHTML('beforeend', noteHTML)
   }
-  
-  //this should sort View/Edit Note
-  // $('#firstCollapseMenu').collapsible({
-  //   accordion: false,
-  //   accordionUpSpeed: 400,
-  //   accordionDownSpeed: 400,
-  //   collapseSpeed: 400,
-  //   contentOpen: null,
-  //   arrowRclass: 'arrow-r',
-  //   arrowDclass: 'arrow-d',
-  //   animate: true
-  // });
+
   
 
   getAllNotes().then(renderNotesList)
@@ -78,7 +67,19 @@ function noteActionHTML (note) {
     bodyField.value = ''
     postNewNote(noteText).then(renderNewNote)
   })
-  
+    
+  //this code is for View/Edit page and Delete page
+  // $('#firstCollapseMenu').collapsible({
+  //   accordion: false,
+  //   accordionUpSpeed: 400,
+  //   accordionDownSpeed: 400,
+  //   collapseSpeed: 400,
+  //   contentOpen: null,
+  //   arrowRclass: 'arrow-r',
+  //   arrowDclass: 'arrow-d',
+  //   animate: true
+  // });
+
   q('#notes').addEventListener('click', event => {
     if (event.target.matches('.delete')) {
     print('delete ' + event.target.parentElement.dataset.noteId)
