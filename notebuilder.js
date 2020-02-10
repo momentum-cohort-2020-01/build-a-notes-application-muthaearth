@@ -60,9 +60,9 @@ function noteActionHTML (note) {
   
   q('#note-form').addEventListener('submit', event => {
     event.preventDefault()
-    const subjectField = q('#subject')
-    const bodyField = q('#body')
-    const noteText = subjectField.value + '<br>' + bodyField.value
+    let subjectField = q('#subject')
+    let bodyField = q('#body')
+    let noteText = subjectField.value + '<br>' + bodyField.value
     subjectField.value = ''
     bodyField.value = ''
     postNewNote(noteText).then(renderNewNote)
