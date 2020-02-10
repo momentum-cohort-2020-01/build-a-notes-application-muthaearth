@@ -1,6 +1,6 @@
 /* globals fetch, moment */
 
-let bodyText = ".body-text"
+let bodyText = "#body-text"
 
 function print (value) {
     console.log(value)
@@ -79,11 +79,8 @@ function noteActionHTML (note) {
   })
   
   q('#notes').addEventListener('click', event => {
-    event.preventDefault()
     if (event.target.matches('.delete')) {
-      print('delete ' + event.target.parentElement.dataset.noteId)
-      return fetch(('http://localhost:3000/notes/'  + event.target.parentElement.dataset.noteId),
-      {method: 'DELETE'})
+    print('delete ' + event.target.parentElement.dataset.todoId)
       // NOTE send AJAX request to delete note
     }
   })

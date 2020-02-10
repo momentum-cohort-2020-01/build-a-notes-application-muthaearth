@@ -42,6 +42,12 @@ header{
   margin: 2rem auto;
 }
 
+/* image of my Notes App schematic */
+.schema {
+  max-width:100%;
+  height:auto;
+}
+
 .form label, .form input {
 display: block;
 width: 100%;
@@ -73,7 +79,4 @@ textarea, .body-text{
   padding: 0.25rem 0.5rem;
 }
 
-.schema {
-  max-width:100%;
-  height:auto;
-}
+
